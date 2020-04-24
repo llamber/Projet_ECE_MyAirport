@@ -1,0 +1,61 @@
+﻿@page
+@model LO.MyAirport.Razor.Pages.Vols.DetailsModelVol
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Vol</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Vol.Cie)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Vol.Cie)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Vol.Lig)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Vol.Lig)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Vol.Dhc)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Vol.Dhc)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Vol.Pkg)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Vol.Pkg)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Vol.Imm)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Vol.Imm)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Vol.Pax)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Vol.Pax)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Vol.Des)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Vol.Des)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Vol.VolId">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

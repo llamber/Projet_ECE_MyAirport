@@ -1,0 +1,65 @@
+﻿@page
+@model LO.MyAirport.Razor.Pages.Vols.EditModelVol
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Vol</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Vol.VolId" />
+            <div class="form-group">
+                <label asp-for="Vol.Cie" class="control-label"></label>
+                <input asp-for="Vol.Cie" class="form-control" />
+                <span asp-validation-for="Vol.Cie" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vol.Lig" class="control-label"></label>
+                <input asp-for="Vol.Lig" class="form-control" />
+                <span asp-validation-for="Vol.Lig" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vol.Dhc" class="control-label"></label>
+                <input asp-for="Vol.Dhc" class="form-control" />
+                <span asp-validation-for="Vol.Dhc" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vol.Pkg" class="control-label"></label>
+                <input asp-for="Vol.Pkg" class="form-control" />
+                <span asp-validation-for="Vol.Pkg" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vol.Imm" class="control-label"></label>
+                <input asp-for="Vol.Imm" class="form-control" />
+                <span asp-validation-for="Vol.Imm" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vol.Pax" class="control-label"></label>
+                <input asp-for="Vol.Pax" class="form-control" />
+                <span asp-validation-for="Vol.Pax" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vol.Des" class="control-label"></label>
+                <input asp-for="Vol.Des" class="form-control" />
+                <span asp-validation-for="Vol.Des" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
